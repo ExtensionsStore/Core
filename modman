@@ -1,0 +1,4 @@
+app/code/local/Aydus/Core/          app/code/local/Aydus/Core/
+app/etc/modules/Aydus_Core.xml      app/etc/modules/Aydus_Core.xml
+
+@shell rm -rf $PROJECT/var/cache/*

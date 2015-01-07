@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Emailheaderfooter module config
+ * 
+ * @category    Aydus
+ * @package     Aydus_Emailheaderfooter
+ * @author      Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_Core>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Aydus_Core>
+    </modules>
+</config>

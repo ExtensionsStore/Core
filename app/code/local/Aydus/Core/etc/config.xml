@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ *
+ * @category    Aydus
+ * @package     Aydus_Core
+ * @author      Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+	<modules>
+		<Aydus_Core>
+			<version>1.0.0</version>
+		</Aydus_Core>
+	</modules>
+	<global>
+		<helpers>
+			<aydus>
+				<class>Aydus_Core_Helper</class>
+			</aydus>
+		</helpers>
+        <models>
+            <aydus>
+                <class>Aydus_Core_Model</class>
+                <resourceModel>aydus_resource</resourceModel>
+            </aydus>
+            <aydus_resource>
+                <class>Aydus_Core_Model_Resource</class>
+                <entities>
+                    <schedule>
+                        <table>aydus_core_schedule</table>
+                    </schedule>
+                </entities>
+            </aydus_resource>
+        </models>
+        <events>
+            <adminhtml_init_system_config>
+                <observers>
+                    <aydus_system_config>
+                        <class>aydus/observer</class>
+                        <method>groupExtensions</method>
+                    </aydus_system_config>
+                </observers>
+            </adminhtml_init_system_config>
+        </events>
+		<resources>
+			<aydus_setup>
+				<setup>
+					<module>Aydus_Core</module>
+					<class>Mage_Eav_Model_Entity_Setup</class>
+				</setup>
+			</aydus_setup>
+			<connection>
+				<use>core_setup</use>
+			</connection>
+		</resources>		
+	</global>
+</config>

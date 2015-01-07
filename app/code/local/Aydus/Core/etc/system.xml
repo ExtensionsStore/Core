@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ *
+ * @category    Aydus
+ * @package     Aydus_Core
+ * @author      Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+	<tabs>
+		<aydus translate="label" module="aydus">
+			<label>Aydus Extensions</label>
+			<sort_order>1</sort_order>
+		</aydus>
+	</tabs>
+</config>
