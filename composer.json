@@ -1,0 +1,18 @@
+{
+    "name": "aydus/core",
+    "license": "GPL-3.0",
+    "type": "magento-module",
+    "description": "Core module for Aydus extensions.",
+    "homepage": "https://github.com/aydus/Core.git",
+    "require": {
+        "php": ">=5.3",
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "David Tay",
+            "email": "davidt@aydus.com",
+            "role": "Author/Maintainer"
+        }
+    ]
+}
