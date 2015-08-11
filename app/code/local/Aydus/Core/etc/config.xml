@@ -10,10 +10,39 @@
 <config>
 	<modules>
 		<Aydus_Core>
-			<version>1.0.0</version>
+			<version>1.2.0</version>
 		</Aydus_Core>
 	</modules>
+	<adminhtml>
+        <events>
+            <adminhtml_init_system_config>
+                <observers>
+                    <aydus_core_groupextensions>
+                        <class>aydus/observer</class>
+                        <method>groupExtensions</method>
+                    </aydus_core_groupextensions>
+                    <aydus_core_addversiontogroupfield>
+                        <class>aydus/observer</class>
+                        <method>addVersionToGroupField</method>
+                    </aydus_core_addversiontogroupfield>
+                </observers>
+            </adminhtml_init_system_config>
+            <controller_action_predispatch_adminhtml_system_config_edit>
+                <observers>
+                    <aydus_system_config>
+                        <class>aydus/observer</class>
+                        <method>redirectSection</method>
+                    </aydus_system_config>
+                </observers>
+            </controller_action_predispatch_adminhtml_system_config_edit>
+        </events>
+	</adminhtml>
 	<global>
+		<blocks>
+			<aydus>
+				<class>Aydus_Core_Block</class>
+			</aydus>
+		</blocks>
 		<helpers>
 			<aydus>
 				<class>Aydus_Core_Helper</class>
@@ -33,16 +62,6 @@
                 </entities>
             </aydus_resource>
         </models>
-        <events>
-            <adminhtml_init_system_config>
-                <observers>
-                    <aydus_system_config>
-                        <class>aydus/observer</class>
-                        <method>groupExtensions</method>
-                    </aydus_system_config>
-                </observers>
-            </adminhtml_init_system_config>
-        </events>
 		<resources>
 			<aydus_setup>
 				<setup>
