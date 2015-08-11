@@ -105,30 +105,29 @@ class Aydus_Core_Model_Observer
 
             if ($fields && count($fields)>0){
                 
+                $field = reset($fields);
+                $module = ($field->getAttribute('module')) ? $field->getAttribute('module') : $module;
                 $versionField = @$fields->version;
                 
                 if (!$versionField){
                     
-                    $field = reset($fields);
-                    $module = ($field->getAttribute('module')) ? $field->getAttribute('module') : $module;
-                     
                     $versionField = $fields->addChild('version');
-                     
+                    
                     foreach ($field->attributes() as $attribute => $value){
                         $versionField->addAttribute($attribute,$value);
-                    }
-                    
-                    $versionField->module = ucwords($module,'_');
+                    }             
+                           
                     $versionField->label = 'Version';
                     $versionField->frontend_type = 'text';
-                    $versionField->frontend_model = 'aydus/adminhtml_system_config_form_field_version';
-                    
                     $versionField->show_in_default = (string)$field->show_in_default;
                     $versionField->show_in_website = (string)$field->show_in_website;
                     $versionField->show_in_store = (string)$field->show_in_store;
                     $versionField->sort_order = 0;
-                     
                 }
+                    
+                 
+                $versionField->module = ucwords($module,'_');
+                $versionField->frontend_model = 'aydus/adminhtml_system_config_form_field_version';
 	            
             }
 	        
