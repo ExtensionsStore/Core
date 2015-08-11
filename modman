@@ -1,2 +1,2 @@
-app/code/local/Aydus/Core/          app/code/local/Aydus/Core/
-app/etc/modules/Aydus_Core.xml      app/etc/modules/Aydus_Core.xml
+app/code/local/Aydus/Core          app/code/local/Aydus/Core
+app/etc/modules/Aydus_Core.xml     app/etc/modules/Aydus_Core.xml
