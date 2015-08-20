@@ -124,9 +124,16 @@ class Aydus_Core_Model_Observer
                     $versionField->show_in_store = (string)$field->show_in_store;
                     $versionField->sort_order = 0;
                 }
+                
+                try {
                     
-                 
-                $versionField->module = ucwords($module,'_');
+                    $versionField->module = ucwords($module,'_');
+                    
+                } catch(Exception $e){
+                    
+                    $versionField->module = ucwords($module);
+                }
+                                    
                 $versionField->frontend_model = 'aydus/adminhtml_system_config_form_field_version';
 	            
             }
